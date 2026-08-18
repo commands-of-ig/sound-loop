@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Sound Loop</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <main class="card">
+
+    <div class="music-icon">♫</div>
+
+    <h1>My Sound</h1>
+
+    <p class="subtitle">
+      Press start and let the sound play continuously.
+    </p>
+
+    <div class="visualizer" aria-hidden="true">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <audio
+      id="audio"
+      src="audio/my-sound.ogg"
+      loop
+      preload="auto">
+    </audio>
+
+    <button id="start" class="start">
+      ▶ Start Sound
+    </button>
+
+    <button id="stop" class="stop">
+      ■ Stop
+    </button>
+
+    <div class="volume-row">
+      <span>🔈</span>
+
+      <input
+        id="volume"
+        type="range"
+        min="0"
+        max="1"
+        step="0.01"
+        value="1">
+
+      <span>🔊</span>
+    </div>
+
+    <p id="status">Ready</p>
+
+    <p class="note">
+      The sound is set to loop continuously.
+    </p>
+
+  </main>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
